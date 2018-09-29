@@ -1,3 +1,5 @@
+//(c)BG BizGames GmbH
+
 var config = {
     type: Phaser.AUTO,
     width: OPTIONS.gamewidth,
