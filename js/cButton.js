@@ -51,7 +51,7 @@ class cButton {
     target.tweens.add({
         targets: [t, sprite],
         alpha: 1,
-        duration: 1000,
+        duration: 2000,
         ease: 'Power4',
         x: '+=200',
         delay: 100,
