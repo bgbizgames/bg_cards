@@ -2,9 +2,7 @@ var cMainMenu = new Phaser.Class({
 
     Extends: Phaser.Scene,
 
-    initialize:
-
-    function cMainMenu ()
+    initialize: function cMainMenu ()
     {
         Phaser.Scene.call(this, { key: 'cMainMenu' });
     },
@@ -21,13 +19,13 @@ var cMainMenu = new Phaser.Class({
       this.add.image(512, 384, 'dude');
 
 
-      console.log('cMainMenu.create2');
+      console.log('cMainMenu.create');
       /*
       var mybtnOK = new cButton('OK', function(){
         console.log("success test");
       });
       */
-      var mybtnOK = new cButton('OK', this.testit.bind(this));
+      var mybtnOK = new cButton('OK', this.execOK.bind(this));
 
       mybtnOK.drawButton(this, 400, 300, 180, 60);
 
@@ -41,8 +39,7 @@ var cMainMenu = new Phaser.Class({
 
     },
 
-    testit: function(){
-        console.log("success test");
-        console.log(this.testit);
+    execOK: function(){
+        console.log("button ok clicked");
     }
 });

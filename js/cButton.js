@@ -1,16 +1,12 @@
-class cButton {
+var cButton = new Phaser.Class({
 
-  constructor(newtext, functionCallback){
+  initialize: function cButton(newtext, functionCallback){
     console.log("cButton:constructor");
     this.newtext = newtext;
     this.fcb = functionCallback;
-  }
+  },
 
-  drawButton(target, x, y, width, height) {
-    console.log('drawbutton: x: ' + x);
-    console.log('drawbutton: y: ' + y);
-    console.log('drawbutton: w: ' + width);
-    console.log('drawbutton: h: ' + height);
+  drawButton: function(target, x, y, width, height) {
     var sprite = target.add.sprite(x, y, 'btn').setInteractive();
     var _self = this;
 
@@ -62,7 +58,6 @@ class cButton {
         //onComplete: function(){this.goMenu();}
     });
 
-
   }
 
-}
+});

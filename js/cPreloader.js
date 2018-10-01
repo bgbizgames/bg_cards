@@ -2,10 +2,7 @@ var cPreloader = new Phaser.Class({
 
     Extends: Phaser.Scene,
 
-    initialize:
-
-    function cPreloader ()
-    {
+    initialize: function cPreloader (){
         Phaser.Scene.call(this, { key: 'cPreloader' });
     },
 
@@ -49,8 +46,7 @@ var cPreloader = new Phaser.Class({
     },
 
 
-    preload: function ()
-    {
+    preload: function (){
 
       var progressBar = this.add.graphics();
       var progressBox = this.add.graphics();
@@ -103,8 +99,7 @@ var cPreloader = new Phaser.Class({
 
     },
 
-    create: function ()
-    {
+    create: function () {
       var bg = this.add.image(512, 384, 'bgtablet');
       //game.add.tileSprite(0, 0, 800, 600, 'bggradient');
       bg.alpha = 0;
@@ -124,8 +119,7 @@ var cPreloader = new Phaser.Class({
       //this.goscene();
     },
 
-    goMenu: function()
-    {
+    goMenu: function() {
         console.log('goMenu');
         this.scene.start('cMainMenu');
     }

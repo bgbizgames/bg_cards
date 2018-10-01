@@ -2,9 +2,7 @@ var cEarth = new Phaser.Class({
 
     Extends: Phaser.Scene,
 
-    initialize:
-
-    function cEarth ()
+    initialize: function cEarth ()
     {
         Phaser.Scene.call(this, { key: 'cEarth' });
     },
