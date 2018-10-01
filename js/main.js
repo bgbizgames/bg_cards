@@ -5,7 +5,7 @@ var config = {
     width: OPTIONS.gamewidth,
     height: OPTIONS.gameheight,
     backgroundColor: OPTIONS.gamebackgroundcolor,
-    scene: [ cPreloader, cEarth, cMainMenu ]
+    scene: [ cPreloader, cEarth, cMainMenu, cQuizList ]
 };
 
 

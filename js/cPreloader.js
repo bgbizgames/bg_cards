@@ -70,11 +70,23 @@ var cPreloader = new Phaser.Class({
           progressBox.destroy();
       });
 
-      this.load.image('bgtablet', OPTIONS.imgbase + 'bg/bgtablet1024x768.jpg');
+      //LOAD Backgrounds
+
+      this.load.image('bgblur', OPTIONS.imgbase + 'bg/bgblur1024x768.jpg');
+      this.load.image('bgdepth', OPTIONS.imgbase + 'bg/bgdepth1024x768.jpg');
+      this.load.image('bggradient', OPTIONS.imgbase + 'bg/bggradient1024x768.jpg');
+
+      //LOAD Quiztiles
+      this.load.image('qtanimals', OPTIONS.imgbase + 'quiztiles/animals.jpg');
+      this.load.image('qtarchitecture', OPTIONS.imgbase + 'quiztiles/architecture.jpg');
+      this.load.image('qtmusic', OPTIONS.imgbase + 'quiztiles/music.jpg');
+
+      //LOAD Trash
+
       this.load.image('bgwall', OPTIONS.imgbase + 'bg_wall.png');
       this.load.image('bgearth', OPTIONS.imgbase + 'bg_earth.png');
       this.load.image('bggrass', OPTIONS.imgbase + 'bg_grass.png');
-      this.load.image('bggradient', OPTIONS.imgbase + 'bg_gradient.png');
+
       this.load.image('bgsky', OPTIONS.imgbase + 'bg_sky.png');
       this.load.image('star', OPTIONS.imgbase + 'star.png');
       this.load.image('bomb', OPTIONS.imgbase + 'bomb.png');
@@ -100,7 +112,7 @@ var cPreloader = new Phaser.Class({
     },
 
     create: function () {
-      var bg = this.add.image(512, 384, 'bgtablet');
+      var bg = this.add.image(512, 384, 'bgblur');
       //game.add.tileSprite(0, 0, 800, 600, 'bggradient');
       bg.alpha = 0;
       this.tweens.add({

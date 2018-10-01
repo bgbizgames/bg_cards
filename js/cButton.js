@@ -6,7 +6,7 @@ var cButton = new Phaser.Class({
     this.fcb = functionCallback;
   },
 
-  drawButton: function(target, x, y, width, height) {
+  draw: function(target, x, y, width, height) {
     var sprite = target.add.sprite(x, y, 'btn').setInteractive();
     var _self = this;
 

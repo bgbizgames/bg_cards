@@ -15,8 +15,8 @@ var cMainMenu = new Phaser.Class({
 
     create: function ()
     {
-      var bg = this.add.image(512, 384, 'bgtablet');
-      this.add.image(512, 384, 'dude');
+      var bg = this.add.image(512, 384, 'bgblur');
+      this.add.image(100, 384, 'dude');
 
 
       console.log('cMainMenu.create');
@@ -26,11 +26,10 @@ var cMainMenu = new Phaser.Class({
       });
       */
       var mybtnOK = new cButton('OK', this.execOK.bind(this));
-
-      mybtnOK.drawButton(this, 400, 300, 180, 60);
+      mybtnOK.draw(this, 400, 300, 180, 60);
 
       var mybtnCancel = new cButton('Cancel');
-      mybtnCancel.drawButton(this, 400, 380, 180, 60);
+      mybtnCancel.draw(this, 400, 380, 180, 60);
 
 
       //this.drawButton();
@@ -41,5 +40,6 @@ var cMainMenu = new Phaser.Class({
 
     execOK: function(){
         console.log("button ok clicked");
+        this.scene.start('cQuizList');
     }
 });
