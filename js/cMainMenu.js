@@ -22,7 +22,13 @@ var cMainMenu = new Phaser.Class({
 
 
       console.log('cMainMenu.create2');
-      var mybtnOK = new cButton('OK');
+      /*
+      var mybtnOK = new cButton('OK', function(){
+        console.log("success test");
+      });
+      */
+      var mybtnOK = new cButton('OK', this.testit.bind(this));
+
       mybtnOK.drawButton(this, 400, 300, 180, 60);
 
       var mybtnCancel = new cButton('Cancel');
@@ -34,4 +40,9 @@ var cMainMenu = new Phaser.Class({
 
 
     },
+
+    testit: function(){
+        console.log("success test");
+        console.log(this.testit);
+    }
 });

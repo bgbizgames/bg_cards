@@ -1,10 +1,9 @@
 class cButton {
 
-
-
-  constructor(newtext){
+  constructor(newtext, functionCallback){
     console.log("cButton:constructor");
     this.newtext = newtext;
+    this.fcb = functionCallback;
   }
 
   drawButton(target, x, y, width, height) {
@@ -13,16 +12,19 @@ class cButton {
     console.log('drawbutton: w: ' + width);
     console.log('drawbutton: h: ' + height);
     var sprite = target.add.sprite(x, y, 'btn').setInteractive();
+    var _self = this;
 
     sprite.on('pointerdown', function (pointer) {
 
         this.setTint(0xff0000);
+        _self.fcb();
 
     });
 
     sprite.on('pointerout', function (pointer) {
 
         this.clearTint();
+
 
     });
 
